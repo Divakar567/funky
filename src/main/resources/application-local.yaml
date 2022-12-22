@@ -1,0 +1,25 @@
+server:
+  port: 9009
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/funky
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate.ddl-auto: update
+
+logging:
+  level:
+    root: info
+    com.diva.funky: debug
+  file:
+    path: /logs/${spring.application.name}
+    name: ${logging.file.path}/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${logging.file.path}/${spring.application.name}-%d{yyyy-MM-dd}-%i.log
+      clean-history-on-start: false
+      max-file-size: 64MB
+      total-size-cap: 2GB
+      max-history: 7
