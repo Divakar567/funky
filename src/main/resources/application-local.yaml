@@ -8,6 +8,17 @@ spring:
     password: postgres
   jpa:
     hibernate.ddl-auto: update
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        profile:
+          tenant-id: b9b9b0d6-22fd-410b-af7b-790281cbc0bc
+        credential:
+          client-id: 92163758-d332-4c00-9674-500bad840dd4
+          client-secret: HsS8Q~C_tbSkZwCh88W.p7SbTq0UMK3Ry.mXlbPn
+        application-type: web_application
+#        user-name-attribute: email
 
 logging:
   level:
