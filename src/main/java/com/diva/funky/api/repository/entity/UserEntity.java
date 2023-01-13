@@ -23,7 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity(name = "User")
 @Table(name = "`user`")
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
     @Id
     @Column(name = "`id`")
